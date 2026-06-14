@@ -1,9 +1,10 @@
-<!--
+<!-- 
   PART 2 — HTML & CSS
   ===================
 
+  
   Instructions:
-    - Write your complete HTML page as one unit, starting below the divider at the very bottom
+    - Write  your complete HTML page as one unit, starting below the divider at the very bottom
     - Write all of your CSS in look.css
 
     - try to write your solution without any references
@@ -20,13 +21,74 @@
   [ ] TASK 1 — Page structure
       Write a complete, valid HTML5 page from scratch.
       It must have a document type declaration, an html element,
-      a head with a title tag, and a body.
+      a head with a title tag, and a body. -->
+  
+
+<!DOCTYPE html> 
+<html>
+<head>
+  <title> Document </title>
+   <link rel="stylesheet" href="look.css">
+   <!-- this will be read first -->
+</head>
+
+<body> 
+
+  <h1>My Checkpoint Page</h1>
+
+ <p id="intro"> Hello, I'm Marlin Canelo. I am currently completing part 2 from 
+  TTP-Checkpoint.
+ </p>
+
+ <h2 id="section-title"> Projects: </h2>
+
+
+ <ul>
+  <li class=" highlight"> part 1</li>
+  <li> part 2</li>
+  <li class=" highlight"> part 3</li>
+  <li> part 4</li>
+ </ul>
+
+ <div>
+  <p id="box">yes</p>
+  <button id="click-me"> Click me</button>
+ </div>
+
+<!--
+class - contains varios element containing same type of
+id - unique id for one element
+
+same class - yes, comes from a group
+same id - no, unique
+-->
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+<!-- 
 
   [ ] TASK 2 — Link the stylesheet
       Inside the head, link look.css to this page.
 
       EXPLAIN (write your answer as a comment near your link tag):
         Why does the link to a stylesheet go in the head and not the body?
+
+
+
+
+
+
 
   [ ] TASK 3 — Page content
       Add ALL of the following elements inside the body:
@@ -44,6 +106,13 @@
         Can two elements on the same page share the same class?
         Can two elements on the same page share the same id?
 
+
+
+
+
+
+
+
   [ ] TASK 4 — Specificity (answer here, styles go in look.css)
 
         Look at these two CSS rules:
@@ -55,8 +124,13 @@
         Which color will the paragraph actually be? Why does one rule win?
 
         Answer:
+  tomato will show up bc #id refrence always win
+  tho, if removed, it will show up blue.
 
--->
+
+
+
+--> 
 
 <!-- ============================================================ -->
 <!-- Write your complete HTML page starting below this line      -->

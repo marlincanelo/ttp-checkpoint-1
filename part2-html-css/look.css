@@ -6,6 +6,17 @@
 
   Answer EXPLAIN prompts as CSS comments directly below the relevant rule.
 */
+ 
+
+ p { 
+  color: steelblue; 
+}
+
+#intro {
+color: tomato;  
+  }
+
+
 
 
 /*
@@ -13,11 +24,25 @@
   Using the body TAG selector, set a background color on the page.
 */
 
+body {
+  background-color: white;
+
+}
+
+
+
 
 /*
   TASK B
   Using the h1 TAG selector, set a font size and a color.
 */
+
+h1 {
+  font-size: 32px;
+  color: #e75480;
+}
+
+
 
 
 /*
@@ -27,11 +52,30 @@
 */
 
 
+/* class attribute need . */
+.highlight {
+  background-color: pink;
+  padding: 20px;
+  width: 100px;
+}
+
+
+
+
 /*
   TASK D
   Using the ID selector, give the h2 with the id section-title a color that is
   different from the h1 and different from body text.
 */
+
+
+/* id attribute need # */
+#section-title {
+  color: palevioletred;
+}
+
+
+
 
 
 /*
@@ -50,6 +94,19 @@
            answer:
 */
 
+#box {
+  width: 20px;
+  height: 10px;
+  border: 2px solid pink;
+ 
+  padding: 20px;
+  margin: 10px;
+}
+
+
+
+
+
 
 /*
   TASK F
@@ -57,6 +114,24 @@
   It must have a background color, a text color, a border, padding,
   and a cursor: pointer that turns into a pointer when the user hovers over it.
 */
+
+#click-me {
+  background-color: palevioletred;
+  color: white;
+  border: 2px solid pink;
+  border-radius: 20px;
+  padding: 5px;
+  cursor: pointer;
+
+}
+
+#click-me:hover {
+  background-color: rebeccapurple;
+}
+
+
+
+
 
 
 /*
@@ -74,3 +149,19 @@
 
            answer:
 */
+
+
+p {
+  color: palevioletred
+}
+
+#intro {
+color: orange
+} 
+
+
+
+
+
+
+
