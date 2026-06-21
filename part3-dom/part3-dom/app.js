@@ -19,28 +19,16 @@ console.log("[ SECTION A — Selecting Elements ]")
 // Look at index.html to find each element's id.
 // Store each in its own variable and log all of them.
 //
-
-const heading = document.getElementById("main-heading")
-const subtitle = document.getElementById("subtitle")
-const lists = document.getElementById("list-section")
-
 //   the h1
 //   the p that shows the page status
-//   the unordered lis
+//   the unordered list
+
+
 // A2.
 // Use querySelector to select the following elements.
 // Store each in its own variable and log all of them.
 //
-
-const h2 = document.querySelector("h2")
-console.log(h2)
-
-
 //   the h2 — select it by its tag name
-
-const toggle = document.getElementById("toggle-btn")
-const list = document.getElementsByClassName("list-item")
-
 //   the "Toggle Highlight" button — select it by its id (look at index.html to find it)
 //   a list item — select it by its class (look at index.html to find the class name)
 
@@ -49,16 +37,9 @@ const list = document.getElementsByClassName("list-item")
 // Use querySelectorAll to select all elements with the class "list-item".
 // Store the result in a variable and log it.
 
-const items = document.querySelectorAll(".list-item")
-console.log(items)
-
 
 // A4.
 // Use querySelectorAll to select all elements with the class "list-item".
-
-items.forEach(item => {
-    console.log(item.textContent)
-})
 // Loop over the result and log the text content of each one.
 //
 // Note: the result is a NodeList, not a plain array.
@@ -69,17 +50,7 @@ items.forEach(item => {
 //          What does querySelectorAll return?
 //          How is that different from a regular array?
 //
-//          answer: byID = by id, unique holder, queryselector = can choose either 
-// first one or all belonging to the selected 
-
-
-
-
-
-
-
-
-
+//          answer:
 
 
 // ------------------------------------------------------------
@@ -90,45 +61,27 @@ console.log("\n[ SECTION B — Reading and Changing the DOM ]")
 // B1.
 // Select the h1 with the id "main-heading" and log its text content.
 
-console.log(heading.textContent)
 
 // B2.
 // Select the p with the id "subtitle" and change its text to "Page loaded successfully."
 // This should happen as soon as the page loads — not on a click.
 
-subtitle.textContent = "Page loaded successfully"
-console.log(subtitle)
 
 // B3.
 // Select the p with the id "output-text" and change its text to anything you choose.
 
-const output = document.getElementById("output-text")
-output.textContent = "Marlin Canelo"
-console.log(output)
 
 // B4.
 // Select the div with the id "output-box" and give it a background color of your choice.
 // Do this with JavaScript — not by editing the CSS file.
 
-const box = document.getElementById("output-box")
-box.style.backgroundColor = "pink"
 
 // B5.
 // EXPLAIN: What is textContent?
 //          How is it different from innerHTML?
 //          When would using innerHTML be risky?
 //
-//          answer: textcontent -> changes content. innerhtml -> changes content and even tags
-
-
-
-
-
-
-
-
-
-
+//          answer:
 
 
 // ------------------------------------------------------------
@@ -136,19 +89,9 @@ box.style.backgroundColor = "pink"
 // ------------------------------------------------------------
 console.log("\n[ SECTION C — Responding to Events ]")
 
-
-
 // C1.
 // Add a click listener to the button with the id "change-btn".
 // When clicked, change the text of the h1 with the id "main-heading" to any text you choose.
-
-const change = document.getElementById("change-btn")
-
-change.addEventListener('click', () => {
-    heading.textContent = "HELLOUR"
-    console.log(heading)
-} )
-
 
 
 // C2.
@@ -156,30 +99,14 @@ change.addEventListener('click', () => {
 // When clicked, toggle the class "highlighted" on the p with the id "output-text".
 // Add it if it is not there. Remove it if it is.
 
-toggle.addEventListener('click', () => {
-    output.classList.toggle("highlight")
-     console.log(output)
-} )
-
 
 // C3.
 // Select the h1 with the id "main-heading" and add the class "active" to it.
 // Log the element's class list to confirm the class is there.
-
-heading.classList.add("active")
-console.log(heading)
-
-
 //
 // Then select one of the list items that already has the class "list-item".
 // Remove that class from it.
 // Log its class list to confirm the class is gone.
-
-
-items[0].classList.remove("list-item")
-// console.log(lists.classList)
-console.log(items[0].classList)
-
 
 
 // C4.
@@ -187,7 +114,7 @@ console.log(items[0].classList)
 //          Why can't you write the code outside of a function
 //          and expect it to run when the button is clicked?
 //
-//          answer: code waits for live action
+//          answer:
 
 
 // C5.
@@ -195,19 +122,7 @@ console.log(items[0].classList)
 //          What does classList.add do? What does classList.remove do?
 //          How are they different from setting element.className directly?
 //
-//          answer: toggle -> from class in css, 
-// turns on and off the attributes, .add and .remove permanantely make changes
-
-
-
-
-
-
-
-
-
-
-
+//          answer:
 
 
 // ------------------------------------------------------------
@@ -221,17 +136,6 @@ console.log("\n[ SECTION D — Creating and Adding to the DOM ]")
 // Give it the class "list-item".
 // Append it to the ul with the id "item-list".
 
-const li = document.createElement("li")
-li.textContent = items[1];
-li.classList.add("list-item")
-console.log(li)
-const ul = document.getElementById("item-list")
-
-ul.append(li)
-
-
-
-
 
 // D2.
 // Add a click listener to the button with the id "add-btn".
@@ -242,36 +146,10 @@ ul.append(li)
 //   - Append it to the ul with the id "item-list"
 //   - Clear the input field after
 
-const add = document.getElementById("add-btn")
-
-add.addEventListener('click', () => {
-    const input = document.getElementById("item-input") 
-    console.log(input)
-    const li = document.createElement("li") 
-
-
-    li.textContent = input.value
-    li.classList.add("list-item")
-    ul.append(li)
-    console.log("///")
-    console.log(ul)
-    console.log(li)
-
-    input.value = "";
-
-
-})
-
-
-
 
 // D3.
 // Select the p with the id "output-text" and remove it from the page entirely.
 // After this runs, the element should no longer be visible.
-
-output.remove()
-
-
 
 
 // D4.
@@ -279,10 +157,5 @@ output.remove()
 //          What does appendChild do? What does remove() do?
 //          When does the newly created element actually appear on the page?
 //
-//          answer: createelemt -> makes eleemnt/tag that usually
-//  done in htmk thought js. can add and remove values onto it. append will add it to 
-// a class it belongs to and similar
-
-
-
+//          answer:
 
